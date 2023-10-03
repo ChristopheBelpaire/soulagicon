@@ -1,4 +1,4 @@
-# Snulskit Soulagicon**
+# Snulskit Soulagicon
 
 Pour fabriquer ton propre soulagicon, il de faudra les ingredients usuels suivant :
   *  une raspberry pi, peut importe le modèle
