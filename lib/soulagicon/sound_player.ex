@@ -6,7 +6,10 @@ defmodule Soulagicon.SoundPlayer do
   end
 
   def init(_) do
-    {:ok, :idle}
+    static_directory_path = Path.join(:code.priv_dir(:soulagicon), "")
+    full_path = Path.join(static_directory_path, "shboing.wav")
+    shboing = File.read!(full_path)
+    {:ok, shboing}
   end
 
   def play_sentence() do
@@ -30,9 +33,11 @@ defmodule Soulagicon.SoundPlayer do
     {:noreply, state}
   end
 
-  def handle_cast(:play_shboing, state) do
-    play_sound("shboing.wav", "")
-    {:noreply, state}
+  def handle_cast(:play_shboing, shboing) do
+    port = Port.open({:spawn, "aplay"}, [:binary])
+    send(port, {self(), {:command, shboing}})
+    Port.close(port)
+    {:noreply, shboing}
   end
 
   defp play_sound(file_name, folder) do
