@@ -1,6 +1,7 @@
 # Soulagicon
 
 **Snulskit Soulagicon**
+
 Pour fabriquer ton propre soulagicon, il de faudra les ingredients usuels suivant :
   *  une raspberry pi, peut importe le modèle
   *  un bouton ou capteur servant de monnayeur, celui ci se conectera à la GPIO numéro 14
