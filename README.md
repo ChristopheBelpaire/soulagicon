@@ -1,6 +1,6 @@
 # Snulskit Soulagicon
 
-Pour fabriquer ton propre soulagicon, il de faudra les ingredients usuels suivant :
+Pour fabriquer ton propre soulagicon, il te faudra les ingredients usuels suivant :
   *  une raspberry pi, peut importe le modèle
   *  un bouton ou capteur servant de monnayeur, celui ci se conectera à la GPIO numéro 14
   *  un (solide) boutonn, servant à se soulager, à connecter a la GPIO 15
